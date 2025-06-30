@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WeSpark Completion</title>
   <style>
     body {
@@ -14,33 +14,27 @@
       height: 100vh;
       margin: 0;
     }
-
     .container {
       text-align: center;
       max-width: 400px;
       padding: 20px;
     }
-
     h1 {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 20px;
     }
-
     .emoji {
       width: 50px;
       margin-bottom: 20px;
     }
-
     p {
       font-size: 16px;
       margin: 8px 0;
     }
-
     strong {
       font-weight: bold;
     }
-
     .btn {
       margin-top: 25px;
       background-color: #FFD600;
@@ -55,9 +49,29 @@
       color: black;
       display: inline-block;
     }
-
     .btn:hover {
       background-color: #ffce00;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 480px) {
+      .container {
+        max-width: 90%;
+        padding: 15px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      .emoji {
+        width: 40px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
