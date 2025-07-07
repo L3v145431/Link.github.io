@@ -6,136 +6,118 @@
     <title>WeSpark Completion</title>
     <style>
         :root {
-            --yellow: #FCD307;
-            --black: #000000;
-            --gray: #E2E2E2;
-            --white: #FFFFFF;
+            --global_title_color: #000000;
+            --global_background_color: #E2E2E2;
+            --global_button_text_color: #000000;
+            --global_button_color_main: #FCD307;
+            --global_button_color_secondary: #FFBC00;
+            --global_color_frames: #FFFFFF;
+            --global_color_soft: #E2E2E2;
+            --global_color_pass: #5cb85c;
+            --global_color_fail: #d9534f;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
-             font-family: Helvetica, sans-serif; /* Cambiado a Helvetica */
-            background-color: var(--gray);
+            font-family: Helvetica, sans-serif;
+            background-color: var(--global_background_color);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             line-height: 1.6;
             position: relative;
-            overflow-x: hidden;
-            padding: 20px;
+            overflow: hidden;
+            padding: 0;
         }
-
         .game-wrapper {
-            width: 90vmin;
-            height: 90vmin;
-            max-width: 600px;
-            max-height: 600px;
+            width: 100vmin;
+            height: 100vmin;
+            max-width: 100vw;
+            max-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
         .container {
-            background-color: var(--white);
+            background-color: var(--global_color_frames);
             border-radius: 4vmin;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 25px;
-            width: 100%;
-            height: 100%;
+            padding: 5vmin;
+            width: 90%;
+            height: 90%;
             text-align: center;
             position: relative;
-            z-index: 1;
-            overflow-y: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
-
         h1 {
-            color: var(--black);
-            font-size: clamp(1.8rem, 4vw, 2.2rem);
-            margin-bottom: 10px;
+            color: var(--global_title_color);
+            font-size: clamp(1.8rem, 6vw, 2.2rem);
+            margin-bottom: 2vmin;
         }
-
-        .emoji {
-            width: 70px;
-            margin-bottom: 20px;
+        .video-container {
+            width: 100%;
+            margin-bottom: 3vmin;
         }
-
+        .video-container video {
+            width: 100%;
+            max-width: 65vmin;
+            border-radius: 1%;
+        }
         p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            margin: 8px 0;
+            font-size: clamp(0.8rem, 3vw, 1.2rem);
+            margin: 1vmin 0;
         }
-
         strong {
             font-weight: bold;
         }
-
         .btn {
-            margin-top: 25px;
-            background-color: var(--yellow);
+            margin-top: 3vmin;
+            background-color: var(--global_button_color_main);
             border: none;
-            padding: 12px 24px;
+            padding: 3vmin 6vmin;
             font-weight: bold;
-            font-size: 15px;
-            border-radius: 50px;
+            font-size: clamp(0.8rem, 3vw, 1.2rem);
+            border-radius: 50vmin;
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-decoration: none;
-            color: var(--black);
+            color: var(--global_button_text_color);
             display: inline-block;
         }
-
         .btn:hover {
-            background-color: #FFBC00;
+            background-color: var(--global_button_color_secondary);
         }
-
-        /* Additional responsive styles */
         @media screen and (max-width: 768px) {
-            .game-wrapper {
-                width: 95vmin;
-                height: 95vmin;
-            }
-
             .container {
-                padding: 20px;
+                padding: 3vmin;
             }
-
             h1 {
-                font-size: 1.8rem;
+                font-size: clamp(1.5rem, 6vw, 2rem);
             }
-
             p {
-                font-size: 1rem;
+                font-size: clamp(0.8rem, 3vw, 1rem);
             }
-
             .btn {
-                padding: 10px 20px;
-                font-size: 14px;
+                padding: 3vmin 5vmin;
             }
         }
-
         @media screen and (max-width: 480px) {
-            .game-wrapper {
-                width: 98vmin;
-                height: 98vmin;
-            }
-
             .container {
-                padding: 15px;
+                padding: 2vmin;
             }
-
-            .emoji {
-                width: 50px;
+            .video-container video {
+                max-width: 50vmin;
             }
-
             .btn {
-                padding: 8px 16px;
-                font-size: 12px;
+                padding: 2vmin 4vmin;
             }
         }
     </style>
@@ -143,10 +125,14 @@
 <body>
     <div class="game-wrapper">
         <div class="container">
-            <h1>Congratulations!</h1>
-            <img src="https://static.wixstatic.com/media/a687f1_d397eea3ca7c485dae27f7cd821e6f7f~mv2.png" alt="Party Emoji" class="emoji" />
-            <p>You learned the basics about <strong>WeSpark</strong>!<br/>
-                We want to invite you to join our community of innovators!</p>
+            <h1>Congratulations! <img src="https://static.wixstatic.com/media/a687f1_d397eea3ca7c485dae27f7cd821e6f7f~mv2.png" alt="" style="width: 30px; height: 30px;"></h1></h1>
+            <div class="video-container">
+                <video autoplay loop muted>
+                    <source    src="https://video.wixstatic.com/video/a687f1_a18dba778586450cbaa4a53f63807c74/1080p/mp4/file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>You learned the basics about <strong>WeSpark</strong>!<br/>We want to invite you to join our community of innovators!</p>
             <p>Join over 2000+<br/>innovators on <strong>LinkedIn</strong>!</p>
             <a href="https://linkedin.com/company/wesparkinnovation" target="_blank" class="btn">Join us on LinkedIn</a>
         </div>
